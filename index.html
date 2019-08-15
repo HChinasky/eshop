@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>E-Shop</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <div id="app" class="container-fluid">
+    <div class="row">
+      <header class="container-fluid es-head">
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <nav class="navbar navbar-expand-lg p-0 w-100">
+                <button class="navbar-light bg-light navbar-toggler bg-light media_menu" type="button"
+                  data-toggle="collapse" data-target="#support_menu" aria-controls="support_menu" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse order-1 order-md-0 dual-collapse2 menu-block" id="support_menu">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active ml-md-2 ml-sm-2">
+                      <a class="nav-link" href="#">Начало<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ml-md-2 ml-sm-2">
+                      <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                    <li class="nav-item ml-md-2 ml-sm-2">
+                      <a class="nav-link" href="#">Статьи</a>
+                    </li>
+                    <li class="nav-item ml-md-2 ml-sm-2">
+                      <a class="nav-link" href="#">О компании</a>
+                    </li>
+                    <li class="nav-item ml-md-2 ml-sm-2">
+                      <a class="nav-link" href="#">Новости</a>
+                    </li>
+                    <li class="nav-item ml-md-2 ml-sm-2">
+                      <a class="nav-link" href="#">Доставка и Оплата</a>
+                    </li>
+                    <li class="nav-item ml-md-2 ml-sm-2">
+                      <a class="nav-link" href="#">Гарантии</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lang-block col-sm-3 col-md-2 col-lg-2 offset-lg-0 offset-md-5 offset-sm-2 d-flex justify-content-end">
+                  <ul class="list-inline m-0">
+                    <li class="list-inline-item mr-0"><a href=""><img src="img/eng_lang.png" alt="eng"></a></li>
+                    <li class="list-inline-item"><a href=""><img src="img/rus_lang.png" alt="rus"></a></li>
+                  </ul>
+                </div>
+                <div class="order-3  autorization-block d-flex justify-content-end">
+                  <ul class="list-inline ml-auto m-0">
+                    <li class="list-inline-item">
+                      <a class="nav-link pl-3 icon-entry" href="#">Вход</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="nav-link pl-3 icon-add-user pr-md-0" href="#">Регистрация</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="contact-block container-fluid">
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12 logo-bl">
+                <div class="row justify-content-center">
+                  <a href="#"><img src="img/logo.png" alt="logo"></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 offset-md-05 col-sm-8">
+                <div class="row">
+                  <div class="col-1 d-sm-none"></div>
+                  <div class="col-10 col-sm-12 col-lg-12 media-block-info-search ">
+                    <a class="d-flex flex-lg-row-reverse w-md-100 link-feedback" href="#"
+                      data-toggle="modal" data-target="#exampleModal">Не дозвонились?</a>
+                    <ul class="nav d-inline-flex d-flex justify-content-between w-100">
+                      <li class="nav-item icon-mtc pl-4"><a href="tel:0507577577"><span>(050)</span>757-75-77</a></li>
+                      <li class="nav-item icon-kyivstar pl-4"><a href="tel:0677577577"><span>(067)</span>757-75-77</a>
+                      </li>
+                    </ul>
+                    <form class="form-inline w-100 search-site">
+                      <input class="form-control w-100 shadow-none" type="search" placeholder="Поиск по сайту..."
+                        v-model="search">
+                      <ul class="list-group search-helper">
+                        <li v-for="(producer, index) of searchProducer" class="list-group-item pointer"
+                          :class="{'d-none': search === ''}">
+                          <A class="text-success d-flex justify-content-between"
+                            :href="producer.link">{{ producer.name }}
+                            <span class="text-secondary small">{{ producer.country }}</span></a>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+                  <div class="col-1 d-sm-none"></div>
+                </div>
+              </div>
+              <div class="col-lg-3 offset-md-05 offset-sm-1 col-sm-3 col-md-3">
+                <div class="row align-items-center">
+                  <div
+                    class="shop-cart-img col-lg-5 shop-cart col-lg-5 d-none d-md-none d-lg-flex d-sm-none h-100 justify-content-center">
+                    <div class="row">
+                      <img src="img/basket.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="row shop-cart-text">
+                      <h3 class="d-none d-sm-flex d-md-flex d-lg-flex">Корзина<i class="d-lg-none d-sm-block d-md-block ml-2 fas fa-shopping-cart"></i></h3>
+                      <ul class="list-inline mt-sm-2 w-100">
+                        <li class="list-inline-item d-sm-none d-inline-block d-md-none d-lg-none "><i class="ml-2 fas fa-shopping-cart"></i></li>
+                        <li class="list-inline-item">Товаров: <span class="font-weight-bold">5</span></li>
+                        <li class="list-inline-item">На суму: <span class="font-weight-bold">50000 грн.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-menu container-fluid">
+        <div class="container d-flex justify-content-center align-items-center">
+          <nav class="navbar navbar-expand-lg second-navbar px-0 w-100">
+
+            <ul class="navbar-nav d-none d-lg-flex">
+              <li class="nav-item h-100 d-flex align-items-center"><a href="#" class="nav-link px-4-5">женская
+                  одежда</a>
+              </li>
+              <li class="nav-item h-100 d-flex align-items-center"><a href="#" class="nav-link px-4-5">мужская
+                  одежда</a>
+              </li>
+              <li class="nav-item h-100 d-flex align-items-center"><a href="#" class="nav-link px-4-5">детская
+                  одежда</a>
+              </li>
+              <li class="nav-item h-100 d-flex align-items-center"><a href="#" class="nav-link px-4-5">подарочная
+                  карта</a>
+              </li>
+              <li class="nav-item h-100 d-flex align-items-center"><a href="#" class="nav-link px-4-5">бренды</a></li>
+              <li class="nav-item h-100 d-flex align-items-center"><a href="#" class="nav-link px-4-5">новинки</a></li>
+              <li class="nav-item h-100 d-flex align-items-center"><a href="#" class="nav-link px-4-5">распродажа</a>
+              </li>
+            </ul>
+
+            <div class="col-sm-3 col-md-3 col-lg-3 d-lg-none"></div>
+            <div
+              class="dropdown d-md-flex d-lg-none btn-dress col-6 col-lg-2 col-md-2 col-sm-2 d-flex justify-content-center">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">одежда</button>
+              <div class="dropdown-menu media-dropdown-main-menu">
+                <a class="dropdown-item" href="#">женская
+                  одежда</a>
+                <a class="dropdown-item" href="#">мужская
+                  одежда</a>
+                <a class="dropdown-item" href="#">детская
+                  одежда</a>
+              </div>
+            </div>
+            <div
+              class="dropdown d-md-flex d-lg-none btn-diff col-6 col-lg-2 col-md-2 col-sm-2 d-flex justify-content-center">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">разное</button>
+              <div class="dropdown-menu media-dropdown-main-menu">
+                <a class="dropdown-item" href="#">подарочная
+                  карта</a>
+                <a class="dropdown-item" href="#">бренды</a>
+                <a class="dropdown-item" href="#">новинки</a>
+                <a class="dropdown-item" href="#">распродажа</a>
+              </div>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3 d-lg-none"></div>
+          </nav>
+        </div>
+      </section>
+
+      <div class="container main-slider">
+        <div class="row">
+          <swiper ref="awesomeSwiperA" :options="swiperOptionA">
+            <!-- slides -->
+            <swiper-slide><img src="img/slider_1.png" class="w-100 h-100" alt="slider 1"></swiper-slide>
+            <swiper-slide><img src="img/slider_1.png" class="w-100 h-100" alt="slider 2"></swiper-slide>
+            <swiper-slide><img src="img/slider_1.png" class="w-100 h-100" alt="slider 3"></swiper-slide>
+          </swiper>
+          <!-- Optional controls -->
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </div>
+      </div>
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+        <div class="modal-dialog modal-feedback" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Не дозвонились?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Введите ваш номер и мы Вам перезвоним.</p>
+              <form class="w-75 d-inline-block">
+                <div class="form-group">
+                    <span>+380</span> <the-mask class=" phone-client" id="phone_client" mask="(##) ###-##-##" />
+                </div>
+              </form>
+                <button type="button" id="send_form" class="btn btn-send w-10 d-inline-block">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0d7ca4cb4c.js"></script>
+  <!-- Bootstrap & jQuery JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <!-- Vue js -->
+  <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <!-- Vue number mask -->
+  <script type="application/javascript" src="https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js"></script>
+  <!-- Slider -->
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js">
+  </script>
+  <script type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
+  <!-- Vue App js -->
+  <script type="application/javascript" src="js/vue.js"></script>
+
+</body>
+
+</html>

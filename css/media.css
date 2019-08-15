@@ -1,0 +1,196 @@
+@media screen and (min-width: 320px) and (max-width: 578px) {
+  .media_menu {
+    margin-left: 15px;
+  }
+  .lang-block {
+    right: 160px;
+  }
+  .autorization-block {
+    width: 175px;
+  }
+  .autorization-block > .list-inline {
+    margin-right: 20px !important;
+  }
+  .autorization-block > .list-inline > .list-inline-item > a {
+    padding-right: 0;
+  }
+  .lang-block {
+    margin-right: 0;
+    width: auto;
+  }
+  .logo-bl {
+    margin-left: -10px;
+  }
+  .logo-bl img {
+    width: 260px;
+  }
+  .contact-block > .row {
+    height: 210px;
+  }
+  .icon-mtc > a, .icon-kyivstar > a {
+    font-size: 12px;
+  }
+  .menu-block > .navbar-nav {
+    margin-left: 0;
+    background-image: -moz-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.21);  
+    width: 150px;
+  }
+  #support_menu {
+    position: absolute;
+    top: 35px;
+    z-index: 99;
+    width: 150px;
+    left:15px;
+  }
+  #support_menu > ul li {
+    margin-left: 5px;
+  }
+  .swiper-container {
+    height: 160px;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    left: 0;
+  }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0;
+  }
+  .shop-cart-text {
+    position: relative;
+    bottom: 5px;
+  }
+  .shop-cart-text > ul {
+    text-align: center;
+  }
+  .media-dropdown-main-menu > a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 579px) and (max-width: 760px) {
+  .lang-block {
+    right: 160px;
+  }
+  .autorization-block {
+    width: 160px;
+  }
+  .menu-block > .navbar-nav {
+    margin-left: 0;
+    background-image: -moz-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.21);  
+    width: 150px;
+  }
+  .media-block-info-search {
+    padding-left: 0;
+  }
+  .shop-cart-text > h3 {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  .icon-mtc > a, .icon-kyivstar > a {
+    font-size: 14px;
+  }
+  #support_menu {
+    position: absolute;
+    top: 35px;
+    z-index: 99;
+    width: 150px;
+  }
+  .contact-block > .row {
+    height: 190px;
+  }
+  .swiper-container {
+    height: 250px;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    left: 0;
+  }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 761px) and (max-width: 960px) {  
+  .lang-block {
+    right: 160px;
+  }
+  .autorization-block {
+    width: 145px;
+  }
+  .menu-block > .navbar-nav {
+    margin-left: 0;
+    background-image: -moz-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(35,35,35) 0%, rgb(72,72,72) 100%);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.21);  
+    width: 150px;
+  }
+  .contact-block > .row > .container > .row {
+    margin-top: 30px;
+  }
+  .icon-mtc > a, .icon-kyivstar > a {
+    font-size: 12px;
+  }
+  .logo-bl {
+    margin-left:-12px;
+  }
+  .logo-bl img {
+    width: 240px;
+    height: 78px;
+  }
+  .media-block-info-search {
+    padding-left: 0;
+  }
+  #support_menu {
+    position: absolute;
+    top: 35px;
+    z-index: 99;
+    width: 150px;
+  }
+  .contact-block > .row {
+    height: 165px;
+  }
+  .swiper-container {
+    height: 250px;
+  }  
+  .shop-cart-text {
+    padding-top: 5px;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    left: -25px;
+  }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: -25px;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1360px) {
+  .lang-block {
+    right: 160px;
+  }
+  .logo-bl img {
+    width: 240px;
+    height: 78px;
+  }
+  .shop-cart-text {
+    padding-top: 5px;
+  }
+  .contact-block > .row > .container > .row {
+    margin-top: 10px;
+  }
+}
+
+
+@media screen and (min-width: 1361px) and (max-width: 1920px) {
+  .menu-block > .navbar-nav {
+    margin-left: 0;
+  }
+  .contact-block > .row > .container > .row {
+    margin-top: 20px;
+  }
+  
+}
